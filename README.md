@@ -7,9 +7,9 @@ update @ 2020/04/30
 
 - Due to MS51 unable to set customize PWM CNR , in order to have exact division  , Freq set to 375
 
-	-- PWM_CNR formula : (SYS_CLK/PWM_FREQ)/PWM_PSC - 1
+	- PWM_CNR formula : (SYS_CLK/PWM_FREQ)/PWM_PSC - 1
 	
-	-- PWM_CMR formula : PWM_DUTY x (PWM_CNR + 1)/1000	(with duty from 0.1% to 100%)
+	- PWM_CMR formula : PWM_DUTY x (PWM_CNR + 1)/1000	(with duty from 0.1% to 100%)
 
 - reverse duty increase or decrease when reach 0% or 100%
 
