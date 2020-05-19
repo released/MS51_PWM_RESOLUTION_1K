@@ -63,8 +63,8 @@ uint8_t BitFlag = 0;
 #define is_flag_set(idx)							(BitFlag_READ(ReadBit(idx)))
 #define set_flag(idx,en)							( (en == 1) ? (BitFlag_ON(ReadBit(idx))) : (BitFlag_OFF(ReadBit(idx))))
 
-#define PWM_PSC 								(32)	
-#define PWM_FREQ 								(375)	
+#define PWM_PSC 								(8)	//(32)	
+#define PWM_FREQ 								(1000)	//(375)	
 #define PWM_DUTY                               (0)
 
 //16 bit
@@ -167,7 +167,7 @@ void PWM0_CHx_Init(void)
     PWM3_P00_OUTPUT_ENABLE;
   
     PWM_IMDEPENDENT_MODE;
-    PWM_CLOCK_DIV_32;
+    PWM_CLOCK_DIV_8;	//PWM_CLOCK_DIV_32;
 
 /*
 	PWM frequency   = Fpwm/((PWMPH,PWMPL)+1) = (24MHz/2)/(PWMPH,PWMPL)+1) = 20KHz

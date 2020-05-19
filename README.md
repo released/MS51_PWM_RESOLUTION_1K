@@ -1,6 +1,21 @@
 # MS51_PWM_RESOLUTION_1K
  MS51_PWM_RESOLUTION_1K
 
+update @ 2020/05/19
+
+- Modify FREQ : 1K , resolution keep as 1K 
+
+- PWM_PSC change to 8 , PWM_FREQ change to 1000 , 
+
+{
+
+	CNR will be ( 24000000 / 1000 ) 8 - 1 = 3000 - 1 ,
+	
+	CMR will be target duty * 3000 / 1000 , target duty from 1 to 1000
+
+}
+
+
 update @ 2020/04/30
 
 - Set P0.0 (PWM0_CH3) Freq as 375Hz , change duty with 0.1% (resolution 1000) per 100 ms
